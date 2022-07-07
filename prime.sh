@@ -1,9 +1,13 @@
-read -p "enter the number:" num
+# 1 to 150
+
+for(( i=2 ; i<=150 ;i++ ))
+do
+
 isprime=1
 
-for(( j=2 ; j<=$num/2 ; j++ ))
+for(( j=2 ; j<=$i/2 ; j++ ))
 do 
-   if(( num%j == 0 ))
+   if(( i%j == 0 ))
     then
         isprime=0
         break
@@ -11,7 +15,6 @@ do
 done
 if(( isprime == 1 ))
 then
-     echo "prime"
-else
-     echo "not prime"
+     echo $i
 fi
+done
